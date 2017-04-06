@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<h2><center>Welcome To Twilio</center></h2>
+
+<h3><center>Use this service to send any message anywhere, for free</center></h3><br/><hr/>
+
+<div class="row text-center">
+
+  <ul class="listdecorations">
+
+  <% @messages.each do |message| %>
+
+  <li>
+    <strong>from: <%= message.from %><br/></strong><strong>to: <%= message.to %><br/></strong>
+     text: <%= message.body %><hr/>
+  </li>
+
+  <% end %>
+
+  </ul>
+
+</div>
+
+<div class="row">
+  <%= render("/messages/form")%>
+</div>

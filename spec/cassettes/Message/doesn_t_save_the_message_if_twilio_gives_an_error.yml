@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.twilio.com/2010-04-01/Accounts/<twilio account sid>/Messages.json
+    body:
+      encoding: UTF-8
+      string: Body=You+are+at+Moringa&To=111111&From=987654321
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.1 (linux-gnu x86_64) ruby/2.3.1p112
+      Content-Length:
+      - '48'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - api.twilio.com
+      Authorization:
+      - Basic QUMzN2M3OWRhMTE1NTJhNDJkZWVhNTAxMzBmYTkwOTUyMzplMDRmMTdlODhlYjdiOGM4MWZlYjFiOTUxZGNkN2EyZg==
+  response:
+    status:
+      code: 401
+      message: UNAUTHORIZED
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - ETag
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 06 Apr 2017 09:23:52 GMT
+      Twilio-Request-Duration:
+      - '0.031'
+      Twilio-Request-Id:
+      - RQfd78e49b2dcc46c59d2e01b3e186f186
+      Www-Authenticate:
+      - Basic realm="Twilio API"
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '171'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"code": 20003, "detail": "Your AccountSid or AuthToken was incorrect.",
+        "message": "Authenticate", "more_info": "https://www.twilio.com/docs/errors/20003",
+        "status": 401}'
+    http_version: 
+  recorded_at: Thu, 06 Apr 2017 09:23:52 GMT
+recorded_with: VCR 3.0.3

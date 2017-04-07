@@ -15,6 +15,10 @@ class MessagesController < ApplicationController
 
     if @message.save
       redirect_to messages_path, notice: 'Message was successfully created.'
+      respond_to do |format|
+        format.html{redirect_to messages_path}
+        format.js
+      end
     else
       render :new
     end

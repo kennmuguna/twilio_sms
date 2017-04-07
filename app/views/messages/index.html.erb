@@ -5,6 +5,10 @@
 <h3><center>Use this service to send any message anywhere, for free</center></h3><br/><hr/>
 
 <div class="row text-center">
+  <%= link_to "Send sms", new_message_path, class:"btn", id:"new_link", remote: true%>
+</div><hr/><br/>
+
+<div class="row text-center container-fluid">
 
   <ul class="listdecorations">
 
@@ -19,8 +23,4 @@
 
   </ul>
 
-</div>
-
-<div class="row">
-  <%= render("/messages/form")%>
 </div>
